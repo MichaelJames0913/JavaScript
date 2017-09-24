@@ -1,0 +1,34 @@
+
+
+<!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!--
+Javascript, and the ability to dynamically create portions of a web page are ideal for
+setting up and using shopping carts. here is an example of a shopping cart interface from the PayPal 
+-->
+<!doctype html>
+<html>
+   <!--STARTHEAD-->
+   <HEAD>
+      <meta charset="UTF-8">
+      <BASE href='http://www.college1.com/users/cs190/mjschmidt1@my.canyons.edu/'>
+      <!--STARTJS-->
+      <SCRIPT type="text/javascript"> 
+         // ONLY PLACE JAVASCRIPT HERE, KEEP THE SCRIPT TAGS   
+           
+      </SCRIPT>
+      <!--ENDJS-->
+   </HEAD>
+   <body>
+      <!--CODE FOR WEB PAGE GOES HERE-->
+      <form name="_xclick" target="paypal" action="https://www.paypal.com" method="post">
+         <input type="hidden" name="cmd" value="_cart">
+         <input type="hidden" name="business" value="nora-alice@paypal.com">
+         <input type="hidden" name="item_name" value="HTML book">
+         <input type="hidden" name="amount" value="24.99">
+         <input type="hidden" name="item_number" value="12345">
+         <input type="image" src="http://www.paypal.com/en_US/i/btn/sc-but-01.gif" border="0" name="submit"
+            alt="Make payments with PayPal - it's fast, free and secure!">
+         <input type="hidden" name="add" value="1">
+      </form>
+   </body>
+</html>
