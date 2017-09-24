@@ -1,4 +1,8 @@
 <!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!--
+   this code used a seach box to search for items and then dynamically 
+   changes the page to display the search item. 
+   -->
 <!--STARTHEAD-->
 <!doctype html>
 <html>
@@ -27,15 +31,6 @@
               data += product(data1, data2, data3,data4); // this code thats in product could be done here. 
               data += makeFooter() 
               data +="<div style='text-align:center'><a href='Javascript:mainPage()'>link back to main</a></div>"; 
-              return(data); // return the String 
-            }
-         
-            function buildProduct2(data1, data2, data3, data4){
-              var data  // data holds the String
-              // this is where I had a bug, use'='first then use'+='when creating the html string                 
-              data = makeHeader(); // you get Undefined at top of page, you have to set data equal to somthing first 
-              data += product(data1, data2, data3,data4); // this code thats in product could be done here. 
-              data += makeFooter() 
               return(data); // return the String 
             }
          
