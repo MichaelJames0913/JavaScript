@@ -1,0 +1,134 @@
+<!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!--STARTHEAD-->
+<!doctype html>
+<html>
+   <HEAD>
+      <meta charset="UTF-8">
+      <BASE href='http://www.college1.com/users/cs190/mjschmidt1@my.canyons.edu/'>
+      <!--STARTJS-->
+      <SCRIPT type="text/javascript"> 
+         // ONLY PLACE JAVASCRIPT HERE, KEEP THE SCRIPT TAGS
+            
+            function productPage(data1,data2,data3,data4){  // productPage 
+              document.getElementById("main");
+              document.body.style.backgroundColor = "lightblue";
+              document.getElementById("main").innerHTML = buildProduct(data1,data2,data3,data4); 
+              //document.getElementById('main').innerHTML = buildProduct(data1,data2,data3,data4); 
+            }
+         
+            function mainPage(){     // go back to the main page 
+             document.getElementById("productPage");
+             document.getElementById("main").innerHTML = location.reload();
+            }
+         
+         
+         
+            function buildProduct(data1, data2, data3, data4){
+              var data  // data holds the String
+              // this is where I had a bug, use'='first then use'+='when creating the html string                 
+              data = makeHeader(); // you get Undefined at top of page, you have to set data equal to somthing first 
+              data += product(data1, data2, data3,data4); // this code thats in product could be done here. 
+              data += makeFooter() 
+              data +="<div style='text-align:center'><a href='Javascript:mainPage()'>link back to main</a></div>"; 
+              return(data); // return the String 
+            }
+         
+            function buildProduct2(data1, data2, data3, data4){
+              var data  // data holds the String
+              // this is where I had a bug, use'='first then use'+='when creating the html string                 
+              data = makeHeader(); // you get Undefined at top of page, you have to set data equal to somthing first 
+              data += product(data1, data2, data3,data4); // this code thats in product could be done here. 
+              data += makeFooter() 
+              return(data); // return the String 
+            }
+         
+            function makeHeader() {
+              var data = "<TABLE style='width:100%'><TR style='background-color:lightyellow'><TD >"
+              data ="<H1 style='text-align:center'> Product Description Page</H1>"
+              data +="</TD></TR></TABLE>"
+              return(data)
+            }
+         
+             function product(data1, data2, data3,data4){
+                var data = "<TABLE style='width:100%'><TR style='background-color:lightyellow'><TD >"
+                data = "<TABLE style='width:100%' border=1 cellpadding=10><TR><TD rowspan=3 style='width:30%;text-align:center;vertical-align:middle'>"
+                data += "<IFRAME src="
+                data += "'"+ data4 + "'"
+                data += "width='100%'' height='60%'' id='productarea' name='productarea' frameborder='0' marginheight='0'>Warning your Browser does not support IFRAMES</IFRAME></TD><TD><B>product</B>" 
+                data += ": " + data1 + " "
+                data += "</TD><TD style='text-align:left'<B>product</B>"
+                data += ":  " + data2
+                data += "</TD></TR><TR><TD style='text-align:center' colspan=2>Shopping Cart Link Bar</TD></TR><TR><TD colspan=2 ><B>Product Description</B>"
+                data += ":  " + data3
+                data += "</TD></TR></TABLE>"
+                return(data)
+            }
+         
+            function makeFooter() {
+              var data = "<TABLE style='width:100%' ><TR style='background-color:lightyellow'><TD>"
+              data ="<P style='text-align:center'><B>Copyright 2013 BOB's Computer's</B></P>"
+              data +="</TD></TR></TABLE>"
+              return(data)
+            }
+            
+            ///////////////////////////// NEW LAB 7 CODE /////////////////////////////
+            var ad_Num1 = 1; 
+            var ad_Num2 = 1; 
+         
+            function switchImage(imageNum) { 
+             
+             if(imageNum == 0 && ad_Num1 == 1 ){
+                ad_Num1 = 2; 
+                document.getElementById("image1").src = "http://www.college1.com/images/laptop_2.gif"
+                document.getElementById("image2").src = "http://www.college1.com/images/logo2.jpg"
+             } else if(imageNum == 0 && ad_Num1 == 2){
+                ad_Num1 = 1;
+                document.getElementById("image1").src = "http://www.college1.com/images/laptop_1.gif"
+                document.getElementById("image2").src = "http://www.college1.com/images/logo1.jpg"
+             } 
+            }
+         
+            function productPage2(){  // productPage 
+              document.getElementById("main");
+              document.body.style.backgroundColor = "lightblue";
+              
+              var data1;
+              var data2;
+              var data3;
+              var data4 = document.getElementById("image1").src; 
+         
+              if(data4 == "http://www.college1.com/images/laptop_1.gif"){
+                data1 = "HP 4426";
+                data2 = "4426";
+                data3 = "Newest and Best Laptop from HP Computer"; 
+              } else if(data4 == "http://www.college1.com/images/laptop_2.gif"){
+                data1 = "Dell Dimension 2400";
+                data2 = "2400X";
+                data3 = "A fast 2.4 ghz computer, 80 GB HD, 256 Meg, CDRW and DVD."; 
+              }
+              document.getElementById("main").innerHTML = buildProduct(data1,data2,data3,data4); 
+            }     
+      </SCRIPT>
+      <!--ENDJS-->
+   </HEAD>
+   <body>
+      <div id=main>
+         <!--CODE FOR WEB PAGE GOES HERE-->
+         <h2> Lab 7 Assignment </h2>
+         <div>
+            <TABLE style='width:40%' border=1 cellpadding=10>
+               <TR>
+                  <TD>
+                     <A ONMOUSEOVER="switchImage(0)">
+                     <img id='image1' src="http://www.college1.com/images/laptop_1.gif"></A>
+                  </TD>
+                  <TD>
+                     <A HREF="javascript:productPage2()">
+                     <img id='image2' src="http://www.college1.com/images/logo1.jpg"></A>
+                  </TD>
+               </TR>
+            </TABLE>
+         </div>
+      </div>
+   </body>
+</html>
