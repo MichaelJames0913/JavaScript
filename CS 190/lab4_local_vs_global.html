@@ -1,18 +1,17 @@
 <!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!--
+global variable is a variable with global scope, meaning that it is visible (hence accessible) throughout the program
+local variable is a variable that is given local scope. Local variable references in the function
+-->
 <!doctype html>
 <html>
-   <!--STARTHEAD-->
    <HEAD>
       <meta charset="UTF-8">
-      <BASE href='http://www.college1.com/users/cs190/mjschmidt1@my.canyons.edu/'>
-      <!--STARTJS-->
-      <SCRIPT type="text/javascript"> 
-         // ONLY PLACE JAVASCRIPT HERE, KEEP THE SCRIPT TAGS
-         
-          var customertype = "direct"; 
+      <SCRIPT type="text/javascript">   
+          var customertype = "direct"; //this is a global variable
          
          function changetype(){
-              var newtype;
+              var newtype;  // this is a local variable 
              
               if (customertype == "direct" ) {
                  newtype = "advertising"
@@ -23,9 +22,7 @@
               if (customertype == "subscription")  {
                  newtype = "direct"
               }
-         
-              customertype = newtype;
-         
+              customertype = newtype; // this is where we set the the global to the local 
            } 
          
            function displaytype(){
@@ -41,14 +38,11 @@
               }
           }     
       </SCRIPT>
-      <!--ENDJS-->
    </HEAD>
    <body>
-      <!--CODE FOR WEB PAGE GOES HERE-->
       <H2> Lab 4 Assignment </H2>
-      <div><A HREF="Javascript:changetype()">Change Customer Type</A></div>
-      <div><A HREF="Javascript:displaytype()">Display Message</A></div>
+        <div><A HREF="Javascript:changetype()">Change Customer Type</A></div>
+        <div><A HREF="Javascript:displaytype()">Display Message</A></div>
       <HR / >
    </body>
 </html>
-

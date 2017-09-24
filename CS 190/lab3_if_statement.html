@@ -1,0 +1,41 @@
+<!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!doctype html>
+<html>
+   <HEAD>
+      <meta charset="UTF-8">
+      <SCRIPT type="text/javascript">  
+         // declare global variable outside of your functions
+           var currentspecial = 1 // "is the special"
+         
+           function displayspecial() {
+              if (currentspecial == 1 ) {
+                 alert("The current special is #1")
+              }
+              if (currentspecial == 2 )  {
+                 alert("The current special is #2")
+              }
+              if (currentspecial == 3 )  {
+                 alert("The current special is #3")
+              }
+              currentspecial = currentspecial + 1 // increment currentspecial
+              if (currentspecial > 3) {
+                  currentspecial = 1
+              }
+           } // end of method 
+      </SCRIPT>
+   </HEAD>
+   <body>
+      <H2> Lab 3 Assignment </H2>
+      <A HREF="Javascript:displayspecial()">Todays Special</A>
+      <div>
+         <h3>"SyntaxError: unterminated string literal"</h3>
+      </div>
+      <div>
+         <h3>"SyntaxError: missing )"</h3>
+      </div>
+      <div>
+         <h3>"SyntaxError: missing ) after argument list"</h3>
+      </div>
+      <HR />
+   </body>
+</html>

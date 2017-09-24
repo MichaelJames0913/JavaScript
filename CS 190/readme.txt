@@ -1,2 +1,2 @@
-This repositorie holds code that was used in CMP SCI 190 Javascript at COC, the labs are basic 
-web pages that use HTML and JavaScript to demonstrate the basic principles of web Development. 
+This repositorie holds code that was used in Computer Science 190, Javascript coursework, the labs are 
+basic web pages that use HTML and JavaScript to demonstrate the basic principles of web development. 
