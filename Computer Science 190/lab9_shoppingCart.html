@@ -8,21 +8,111 @@ and using shopping carts. here is an example of a shopping cart interface from t
    <!--STARTHEAD-->
    <HEAD>
       <meta charset="UTF-8">
-      <SCRIPT type="text/javascript">          
+      <SCRIPT type="text/javascript">
+
+            function productPage(data1,data2,data3,data4){  // productPage 
+              document.getElementById("main");
+              document.body.style.backgroundColor = "lightblue";
+              document.getElementById("main").innerHTML = buildProduct(data1,data2,data3,data4); 
+              //document.getElementById('main').innerHTML = buildProduct(data1,data2,data3,data4); 
+            }
+         
+            function mainPage(){     // go back to the main page 
+             document.getElementById("productPage");
+             document.getElementById("main").innerHTML = location.reload();
+            }
+         
+            function buildProduct(data1, data2, data3, data4){
+              var data  // data holds the String
+              // this is where I had a bug, use'='first then use'+='when creating the html string                 
+              data = makeHeader(); // you get Undefined at top of page, you have to set data equal to somthing first 
+              data += product(data1, data2, data3,data4); // this code thats in product could be done here. 
+              data += makeFooter() 
+              data +="<div style='text-align:center'><a href='Javascript:mainPage()'>link back to main</a></div>"; 
+              return(data); // return the String 
+            }
+        
+            function makeHeader() {
+              var data = "<TABLE style='width:100%'><TR style='background-color:lightyellow'><TD >"
+              data ="<H1 style='text-align:center'> Product Description Page</H1>"
+              data +="</TD></TR></TABLE>"
+              return(data)
+            }
+         
+            function product(data1, data2, data3,data4){
+               var data = "<TABLE style='width:100%'><TR style='background-color:lightyellow'><TD >"
+               data = "<TABLE style='width:100%' border=1 cellpadding=10><TR><TD rowspan=3 style='width:30%;text-align:center;vertical-align:middle'>"
+               data += "<IFRAME src="
+               data += "'"+ data4 + "'"
+               data += "width='100%'' height='60%'' id='productarea' name='productarea' frameborder='0' marginheight='0'>Warning your Browser does not support IFRAMES</IFRAME></TD><TD><B>product</B>" 
+               data += ": " + data1 + " "
+               data += "</TD><TD style='text-align:left'<B>product</B>"
+               data += ":  " + data2
+               data += "</TD></TR><TR><TD style='text-align:center' colspan=2>"
+               //////////////////////////////////////////////////////////////////////////////
+               // Shoping Cart Code // 
+               //data += "<div>"
+               data += this.buildShopingCartButton(data1, data2)
+               data += this.buildViewCart()
+               // data += "</div>"
+               // end of shoping cart code 
+               //////////////////////////////////////////////////////////////////////////////
+               data += "</TD></TR><TR><TD colspan=2 ><B>Product Description</B>"
+               data += ":  " + data3
+               data += "</TD></TR></TABLE>"
+               return(data)
+            }
+         
+            function makeFooter() {
+              var data = "<TABLE style='width:100%' ><TR style='background-color:lightyellow'><TD>"
+              data ="<P style='text-align:center'><B>Copyright 2013 BOB's Computer's</B></P>"
+              data +="</TD></TR></TABLE>"
+              return(data)
+            }
+            
+            function buildShopingCartButton(ProductName, productNum)  {
+               // Shoping Cart Code // 
+               var data = ""
+               data +=  "<form name='_xclick' target='paypal' action='https://www.paypal.com' method='post'>"
+               data += "<input type='hidden' name='cmd' value='_cart'>"
+               data += "<input type='hidden' name='business' value='nora-alice@paypal.com'>"
+               // here we need to Dynamically get the product details 
+               data += "<input type='hidden' name='item_name' value=" + ProductName + ">"
+               data += "<input type='hidden' name='amount' value='24.99'>"
+               data += "<input type='hidden' name='item_number' value="+ productNum +">"
+               data += "<input type='image' src='http://www.paypal.com/en_US/i/btn/sc-but-01.gif' border='0' name='submit' alt='Make payments with PayPal - it's fast, free and secure!'>"
+               data += "<input type='hidden' name='add' value='1'>"
+               data += "</form>"
+               // end of shoping cart code               
+               return(data)
+            }
+
+            function buildViewCart(){ 
+               var data="<form name='_xclick' target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post' method='post'>"
+               data += "<input type='hidden' name='cmd' value='_cart'>" 
+               data += "<input type='hidden' name='business' value='nora-alice@paypal.com'>"
+               data += "<input type='image' src='https://www.paypal.com/en_US/i/btn/view_cart.gif' border='0' name='submit'alt='Make payments with PayPal - it's fast, free and secure!''>" 
+               data += "<input type='hidden' name='display' value='1'>"
+               data += "</form>" 
+               return data
+            }
+
       </SCRIPT>
       <!--ENDJS-->
    </HEAD>
    <body>
-      <!--CODE FOR WEB PAGE GOES HERE-->
-      <form name="_xclick" target="paypal" action="https://www.paypal.com" method="post">
-         <input type="hidden" name="cmd" value="_cart">
-         <input type="hidden" name="business" value="nora-alice@paypal.com">
-         <input type="hidden" name="item_name" value="HTML book">
-         <input type="hidden" name="amount" value="24.99">
-         <input type="hidden" name="item_number" value="12345">
-         <input type="image" src="http://www.paypal.com/en_US/i/btn/sc-but-01.gif" border="0" name="submit"
-            alt="Make payments with PayPal - it's fast, free and secure!">
-         <input type="hidden" name="add" value="1">
-      </form>
+     <div id=main>
+      <h2> Lab 9 Assignment </h2>
+      <div>
+         <A HREF="javascript:productPage('HP 4426', '4426','Newest and Best Laptop from HP Computer') "> Item #1: HP 4426</A> 
+      </div>
+      <div>
+         <A HREF="javascript:productPage('IBM 88123 ThinkPad', '88123','IBM micro Laptop Computer')"> Item #2: IBM</A> 
+      </div>
+      <div>
+         <A HREF="javascript:productPage('Dell Dimension 2400', '2400X','A fast 2.4 ghz computer, 80 GB HD, 256 Meg, CDRW and DVD.')"> Item #1: DELL 2400X</A> 
+      </div>
+      <hr />
+        </div>
    </body>
 </html>
