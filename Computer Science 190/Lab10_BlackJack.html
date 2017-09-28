@@ -1,0 +1,42 @@
+<!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!--
+   this is a basic template, that combines both javaScript and html 
+   -->
+<!doctype html>
+<html>
+   <!--STARTHEAD-->
+   <HEAD>
+      <meta charset="UTF-8">
+      <!--specifies the character encoding for the HTML document.--> 
+      <!--STARTJS-->
+      <script type="text/javascript"> 
+         // ONLY PLACE JAVASCRIPT HERE, KEEP THE SCRIPT TAGS   
+         function showCards(imagenum) {
+            
+            //var data = ""; //data to be returned 
+         
+            count = 0
+            while (count < imagenum) { 
+                  document.writeln("<td><img src='http://www.college1.com/images/cards/gbCard52.gif' NAME='card"+count+"'></td>")
+                  count = count + 1
+            }
+         }  
+      </script>
+      <!--ENDJS-->
+   </HEAD>
+   <body>
+      <h2> LAB 10 Assignment </h2>
+      <table border=0 style='margin:auto'>
+         <tr>
+            <td>
+               <form><input type="BUTTON" onClick="Javascript:alert('Dummy Link')" value="Deal > > >"></form>
+            </td>
+            <script type="text/javascript">showCards(4)</script>    <!--  See note below about showCards  -->
+            <td>
+               <form><input type="BUTTON" onClick="Javascript:alert('Dummy Link')" value="< < < Hit Me"></form>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>
+
