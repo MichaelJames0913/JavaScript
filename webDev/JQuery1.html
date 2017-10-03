@@ -1,0 +1,30 @@
+<!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!--
+   My first JQuery page, all it does is move a button across the screen 
+   -->
+<!doctype html>
+<html>
+   <head>
+   <meta charset="UTF-8"><!--specifies the character encoding for the HTML document.--> 
+      <!-- Inserting the jQuery library is no different than inserting your OWN javascript code.--> 
+      <!--Google has posted the library online and this example loads it from a Google web site.-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   </head> 
+   <body>
+      <script>
+
+         // When a web page is loaded, there is lag time from the point it starts loading until it has
+         // completed the download and is ready. The code above simply waits until the document is ready
+         
+         $(document).ready( function(){
+         
+            $("button").click( function(){
+               $("button").animate( { left:'+=100px' } );
+            });
+
+         }); // end of the ready function 
+
+      </script>
+     <BUTTON type='button' style='position:relative;'>move me !</BUTTON>
+   </body>
+</html>
