@@ -1,0 +1,37 @@
+/* CODE CREATED BY MICHAEL JAMES SCHMIDT*/
+/* The pupuse of this code is strictly for educational purpos */
+/* this is how you make comments in a css file */
+
+body {	/* The element selector selects elements based on the element name. */
+background-color: #d0e4fe;
+}
+
+p {
+font-family: "Times New Roman";
+font-size: 28px;
+text-align: center;
+}
+
+.line1{ /* The class selector selects elements with a specific class attribute. */
+color:orange;
+text-align:center;
+font-size: 28px;
+}
+
+.line2{ 
+color:black;
+text-align:center;
+font-size: 20px;
+}
+
+.imageCredit{
+text-align: center;
+font-size: 12px
+color:black;
+}
+
+.facts{
+text-align: left;
+font-size: 12px
+color:black;
+}
