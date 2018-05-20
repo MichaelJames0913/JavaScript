@@ -1,0 +1,152 @@
+
+<!-- CODE CREATED BY MICHAEL JAMES SCHMIDT-->
+<!--
+Dynamic Web Page Creation, for this lab we created a dynamic web page
+this means that we dynamically changed the html on the page. 
+this is done using the document object and id tags
+--> 
+<!doctype html>
+<html>
+   	<HEAD>
+      <meta charset="UTF-8">
+      <style> 
+/* Responsive layout - makes images scale down when the page width changes*/
+@media (min-width: 1400px) {
+  img {
+    width: 18%;
+    padding: 25px;
+    height: auto;
+  }
+}
+@media (max-width: 1400px) {
+  img {
+    width: 18%;
+    padding: 25px;
+    height: auto;
+  }
+}
+@media (max-width: 916px) {
+  img {
+    width: 18%;
+    padding: 20px;
+    height: auto;
+  }
+}
+@media (max-width: 630px) {
+  img {
+    width: 18%;
+    padding: 10px;
+    height: auto;
+  }
+}
+@media (max-width: 487px) {
+  img {
+    width: 18%;
+    padding: 5px;
+    height: auto;
+  }
+}
+@media (max-width: 201px) {
+  img {
+    width: 18%;
+    padding: 3px;
+    height: auto;
+  }
+
+}
+
+table, th, td {
+    border-collapse: collapse;
+     border: 1px solid black;
+}
+
+</style>
+
+
+
+      <SCRIPT type="text/javascript">  
+
+          function filmPage(){  // productPage 
+              document.getElementById("main");
+              document.body.style.backgroundColor = "lightblue";
+              document.getElementById("main").innerHTML = buildfilmPage(); 
+              //document.getElementById('main').innerHTML = buildProduct(data1,data2,data3,data4); 
+            }
+
+             function digitalPage(){  // productPage 
+              document.getElementById("main");
+              document.body.style.backgroundColor = "lightblue";
+              document.getElementById("main").innerHTML = buildDigitalPage(); 
+              //document.getElementById('main').innerHTML = buildProduct(data1,data2,data3,data4); 
+            }
+
+            function graphicsPage(){  // productPage 
+              document.getElementById("main");
+              document.body.style.backgroundColor = "lightblue";
+              document.getElementById("main").innerHTML = buildGraphicsPage(); 
+              //document.getElementById('main').innerHTML = buildProduct(data1,data2,data3,data4); 
+            }
+
+            function buildfilmPage(){
+                //var data =  makeHeader()
+                data = "<body><center><div class=row><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg></div><div class=row><img src=images/w3_2.jpg><img src=images/w3_2.jpg><img src=images/W3_3.jpg style=width:30.5%></div><div class=row><img src=images/w3_4.jpg style=width:70%></div><div class=row><img src=images/w3_2.jpg><img src=images/w3_2.jpg><img src=images/w3_2.jpg></div><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg></div><div class=row><img src=images/w3_2.jpg><img src=images/W3_3.jpg style=width:30.5%><img src=images/w3_2.jpg></div><div class=row><img src=images/w3_4.jpg style=width:70%></div><div class=row><img src=images/W3_3.jpg style=width:30.5%><img src=images/w3_2.jpg><img src=images/w3_2.jpg></div></center></body></html>"
+                //data +=  makeFooter()
+              return(data)
+            }
+
+            function buildDigitalPage() { 
+                data = "<body><center><div class=row><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg></div><div class=row><img src=images/w3_2.jpg><img src=images/w3_2.jpg><img src=images/W3_3.jpg style=width:30.5%></div><div class=row><img src=images/w3_4.jpg style=width:70%></div><div class=row><img src=images/w3_2.jpg><img src=images/w3_2.jpg><img src=images/w3_2.jpg></div><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg></div><div class=row><img src=images/w3_2.jpg><img src=images/W3_3.jpg style=width:30.5%><img src=images/w3_2.jpg></div><div class=row><img src=images/w3_4.jpg style=width:70%></div><div class=row><img src=images/W3_3.jpg style=width:30.5%><img src=images/w3_2.jpg><img src=images/w3_2.jpg></div></center></body></html>"
+                //data +=  makeFooter()
+              return(data)
+            }
+
+            function buildGraphicsPage() { 
+                 data = "<body><center><div class=row><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg></div><div class=row><img src=images/w3_2.jpg><img src=images/w3_2.jpg><img src=images/W3_3.jpg style=width:30.5%></div><div class=row><img src=images/w3_4.jpg style=width:70%></div><div class=row><img src=images/w3_2.jpg><img src=images/w3_2.jpg><img src=images/w3_2.jpg></div><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg><img src=images/W3_1.jpg></div><div class=row><img src=images/w3_2.jpg><img src=images/W3_3.jpg style=width:30.5%><img src=images/w3_2.jpg></div><div class=row><img src=images/w3_4.jpg style=width:70%></div><div class=row><img src=images/W3_3.jpg style=width:30.5%><img src=images/w3_2.jpg><img src=images/w3_2.jpg></div></center></body></html>"
+                //data +=  makeFooter()
+              return(data)
+            }
+
+            function mainPage(){     // go back to the main page 
+             document.getElementById("productPage");
+             document.getElementById("main").innerHTML = location.reload();
+            }
+            /*
+            function makeHeader() {
+              var data = "<TABLE style='width:100%'><TR style='background-color:black'><TD >"
+              data ="<H1 style='text-align:center'> Product Description Page</H1>"
+              data +="</TD></TR></TABLE>"
+              return(data)
+            }
+       
+            function makeFooter() {
+              var data = "<TABLE style='width:100%' ><TR style='background-color:black'><TD>"
+              data ="<P style='text-align:center'><B>Copyright 2013 BOB's Computer's</B></P>"
+              data +="</TD></TR></TABLE>"
+              return(data)
+            }
+            */
+            
+      </SCRIPT>
+   	</HEAD>
+   	<body>
+      <div id=main>
+      <center>
+      <div style="padding: 40px;">
+      <table style="width:100%">
+      <tr>
+        <th align="middle"><h2>Film</h2></th>
+        <th align="middle"><h2>Digital</h2></th>
+        <th align="middle"><h2>Graphics</h2></th>
+      </tr>
+      <tr>
+        <th align="middle"><img src="images/W3_1.jpg" onclick="filmPage()" style="width:80%"></th>
+        <th align="middle"><img src="images/W3_1.jpg" onclick="digitalPage()" style="width:80%"></th>
+        <th align="middle"><img src="images/W3_1.jpg" onclick="graphicsPage()" style="width:80%"></th>
+      </tr>
+      </table>
+      </div> 	  
+      </center>
+
+      </div>
+   	</body>
+</html>
