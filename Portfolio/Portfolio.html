@@ -60,14 +60,14 @@
       <SCRIPT type="text/javascript">  
          function filmPage(){  // productPage 
              document.getElementById("main");
-             document.body.style.backgroundColor = "lightblue";
+             document.body.style.backgroundColor = "black";
              document.getElementById("main").innerHTML = buildfilmPage(); 
              //document.getElementById('main').innerHTML = buildProduct(data1,data2,data3,data4); 
            }
          
             function digitalPage(){  // productPage 
              document.getElementById("main");
-             document.body.style.backgroundColor = "lightblue";
+             document.body.style.backgroundColor = "white";
              document.getElementById("main").innerHTML = buildDigitalPage(); 
              //document.getElementById('main').innerHTML = buildProduct(data1,data2,data3,data4); 
            }
@@ -81,7 +81,7 @@
          
            function buildfilmPage(){
                //var data =  makeHeader()
-               data = "<!DOCTYPE html><html><style> table, th, td { border-collapse: collapse; border: 1px solid black; }</style><body><center><table style=width: 100%> <tr> <img src=images/myFilm1.jpg style=width:90%; padding:20px;></tr><tr> <img src= images/myFilm2.jpg style=width:90%; padding:20px; ></tr><tr> <img src=images/myFilm3.jpg style=width:90%; padding:20px;></tr><tr><th><img src= images/myFilm4.jpg style= width:90%; ></th><th><img src= images/myFilm5.jpg style= width:90%;  ></th></tr></table></center></body></html>"
+               data = "<center><table style=width: 100%> <tr> <img src=images/myFilm1.jpg style=width:90%; padding:20px;></tr><tr> <img src= images/myFilm2.jpg style=width:90%; padding:20px; ></tr><tr> <img src=images/myFilm3.jpg style=width:95%; padding:20px;></tr><tr><th><img src= images/myFilm4.jpg style= width:90%; ></th><th><img src= images/myFilm5.jpg style= width:95%;  ></th></tr></table></center>"
                //data +=  makeFooter()
              return(data)
            }
