@@ -1,0 +1,41 @@
+/* Responsive layout - makes images scale down when the page width changes
+Game Changing code */
+@media (max-width: 1500px) {
+  img {
+    width: 18%;
+    padding: 50px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1500px){
+  img { 
+    width:18%;
+    padding:50px;
+    height: auto;
+   }
+}
+
+@media (max-width: 1488px){
+  img { 
+    width:18%;
+    padding:20px;
+    height: auto;
+   }
+}
+
+@media (max-width: 630px){
+  img { 
+    width:18%;
+    padding:10px;
+    height: auto;
+   }
+}
+
+@media (max-width: 344px){
+  img { 
+    width:18%;
+    padding:2px;
+    height: auto;
+   }
+}
