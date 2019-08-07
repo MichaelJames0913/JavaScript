@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8"/>
+      <SCRIPT src = "js/student.js" type = "text/javascript" ></SCRIPT>
+      <link href = "css/myStyle.css" rel = "stylesheet" type = "text/css"/>
+   </head>
+   <body>
+      <div id=main>
+         <center>
+            <div>
+               <h1>Bob's entertainment DVD/CDs</h1>
+               <p>formerly Bob's VHS sales</p>
+               <p>Bob's enterainment has thouands of DVD and CD for sale, yes compact discs are not out of date, Yet</p>
+            </div>
+            <hr />
+            <BODY onLoad="javascript:popupAd()">
+            <div><A HREF="Javascript:popupAd()">change pop up ad</A>(LAB 13)</div>
+            <div><A HREF="Javascript:displayspecial()">Todays Special(lab3)</A></div>
+            <div> <button onclick="buildBlackJackPage()">BLACK JACK GAME</button>(LAB 10)</div>
+            <div> <button onclick="showForm()">showForm</button>(LAB14)</div>
+            <hr />
+            <FORM NAME="searchbox">
+               <INPUT TYPE="TEXT" id="mySearch" value="44264">
+               <INPUT TYPE="BUTTON" VALUE="Search" ONCLICK="Javascript:doSearch()">(lab6) search items: 44262(dvd), 24000(dvd), 88123(dvd), 44263(CD Lot), 44264(24 CD)
+            </FORM>
+            <div>
+               <p id="searchPage"></p>
+               <iframe id='iframe' style='width:800px;height:400px;' srcdoc="<center><h3>Search For Your Movies and CD</h3></center>"></iframe>
+            </div>
+            <hr />
+            <div>
+               <TABLE style='width:40%' border=1 cellpadding=10>
+                  <TR>
+                     <TD>
+                        <A ONMOUSEOVER = "javascript:switchImage(0)">
+                        <img id='image1' src="images/88123.jpg" height="100" width="200"></A>
+                     </TD>
+                     <TD>
+                        <A HREF="javascript:productPage2()">
+                        <img id='image2' src="images/DVD_DAY.png" ></A>
+                     </TD>
+                  </TR>
+               </TABLE>
+            </div>
+            <div><A HREF="javascript:productPage('7 movies', '44262','7 movies, great for building a collection', 'images/44262.jpg', '40') "> 7 movies special (lab 5)</A></div>
+            <div><A HREF="javascript:productPage('HD DVD Twister', '88123','HD DVD Twister, rare collecters item HD DVD', 'images/88123.jpg', '100')"> HD DVD TWister (lab 5)</A></div>
+            <div><A HREF="javascript:productPage('DVD LOT' , '24000','100 random DVD $200', 'images/24000.png', '200')"> DVD LOT!!!(lab5)</A></div>
+            <div><A HREF="javascript:productPage('Death metal', '44264', '24 hard core CDs', 'images/88124.jpg', '40' )"> Death metal(lab5)</A></div>
+            <div><A HREF="javascript:productPage('CD LOT', '44263', 'over 100 random CD $300', 'images/44263.jpg', '300')"> CD LOT!!!(lab5)</A></div>
+            <hr />
+            <A>Favorite Links (lab 1)</A>
+            <A HREF="Javascript:confirmlink('http://www.ebay.com ')">ebay</A>
+            <A HREF="Javascript:confirmlink('https://www.amazon.com/')">amazon</A>
+            <A HREF="Javascript:confirmlink('http://www.college1.com/users/cs190/mjschmidt1@my.canyons.edu ')">myCollege1</A>
+            <div><A HREF="Javascript:WebPageInformation('alert')">Important Info, Please Read (lab 2 )</A></div>
+            <hr />
+            <div><A HREF="Javascript:changetype()">Change Customer Type (lab 4)</A></div>
+            <div><A HREF="Javascript:displaytype()">Display Message(lab4)</A></div>
+            <div>
+               <center>
+                  <h4>Your Date and Time:</h4>
+                  <script type='text/javascript'> document.writeln(getDate())</script>(lab9)
+               </center>
+            </div>
+            <hr />
+            <script type='text/javascript'> document.writeln(makeColorTableTag())</script>
+            <TR>
+               <TD>
+                  <H1>
+                     THIS IS
+                     <script type='text/javascript'> document.writeln(getBrowser())</script>
+                  </H1>
+               </TD>
+            </TR>
+            </TABLE>
+         </center>
+      </div>
+      </div>
+   </body>
+</html>
