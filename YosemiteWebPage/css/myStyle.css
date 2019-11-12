@@ -12,6 +12,11 @@ font-size: 28px;
 text-align: center;
 }
 
+img{
+	border-radius: 10px;
+}
+
+
 .line1{ /* The class selector selects elements with a specific class attribute. */
 color:orange;
 text-align:center;
