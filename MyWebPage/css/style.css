@@ -1,5 +1,51 @@
 /* IMPACT - By DistinctiveThemes */
 
+
+/***************************************************************/ 
+/* My Code */
+
+.myPhoto{
+    float:left;
+    padding: 50Px ;
+}
+
+
+.thePhoto{
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:  400px;
+    height: 400px; 
+
+
+}
+
+.aboutMe{
+    padding: 50px; 
+   
+}
+
+
+@media only screen and (max-width:991px) {
+ 
+  .myPhoto, .aboutMe {
+    width:100%;
+    padding: 30Px ;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+/***************************************************************/ 
+
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,300);
 
 .clearfix {
