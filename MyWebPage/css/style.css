@@ -1,50 +1,57 @@
 /* IMPACT - By DistinctiveThemes */
+/******************************************************************/
+/** MY CSS CODE **/
 
+.myImage{
+    float: left; 
+    padding: 50px;
 
-/***************************************************************/ 
-/* My Code */
-
-.myPhoto{
-    float:left;
-    padding: 50Px ;
 }
 
+.theImage{
 
-.thePhoto{
-    border-radius: 10px;
     display: block;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
-    width:  400px;
-    height: 400px; 
-
 
 }
 
 .aboutMe{
-    padding: 50px; 
-   
-}
 
-
-@media only screen and (max-width:991px) {
- 
-  .myPhoto, .aboutMe {
-    width:100%;
-    padding: 30Px ;
-  }
-
+    padding: 30px; 
 
 }
 
+@media (max-width: 991px){
+
+    .myImage{
+        width: 100%;
+        padding:10px;
+
+
+    }
+
+    .theImage{
+        height: 300px;
+        width: 300px;
+
+    }
+
+    .aboutMe{
+        width: 100%;
+        padding: 40px;
+
+    }
+
+
+}
 
 
 
-
-
-
-
-/***************************************************************/ 
+/******************************************************************/
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,300);
 
