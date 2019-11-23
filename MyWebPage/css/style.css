@@ -2,6 +2,7 @@
 /******************************************************************/
 /** MY CSS CODE **/
 
+/** CSS CLASSES **/
 .myImage{
     float: left; 
     padding: 50px;
@@ -9,7 +10,6 @@
 }
 
 .theImage{
-
     display: block;
     height: 400px;
     width: 400px;
@@ -20,11 +20,11 @@
 }
 
 .aboutMe{
-
     padding: 30px; 
 
 }
 
+/** Yo, RIGHT HEAR this CSS code that dynamically changes the web page when the sceen is resized **/ 
 @media (max-width: 991px){
 
     .myImage{
@@ -45,10 +45,7 @@
         padding: 40px;
 
     }
-
-
-}
-
+} /** end of MAX-WIDTH  
 
 
 /******************************************************************/
