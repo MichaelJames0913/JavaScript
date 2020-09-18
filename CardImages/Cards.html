@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cards</title>
+	</head>
+	<body>
+		<h2>Cards</h2>
+		<canvas id="cardTable" width=1000 height=800></canvas>
+	</body>
+	<script>
+	
+	var canvas = document.getElementById("cardTable");
+	var ctx = canvas.getContext("2d"); 
+	
+	var deck = new Array();
+
+	var table = new Image(); 
+	table.src = "images/table.png";
+
+	createDeck();
+
+	function createDeck(){
+
+		for(var i=0; i<=8; i++){
+			var myCard = new Image(); 
+			myCard.src = "images/cards/gbCard" + i +".gif";
+			deck.push(myCard);
+		}
+
+	}
+
+	function drawDeck(){
+		
+		var x = 0; 
+		var y = 0;
+
+		for(var i = 0; i<=8; i++){
+			ctx.drawImage(deck[i], x, y);
+			x += 100; 
+		}
+	}
+
+	function draw(){
+
+		ctx.drawImage(table, 0 , 0);
+		drawDeck(); 
+
+	}
+
+	window.onload = draw; 
+
+
+	</script>
+</html>
